@@ -1,0 +1,22 @@
+{
+  "name": "atectix-ai-engineering-skills",
+  "version": "0.1.0",
+  "description": "Reusable skills for AI-native software development.",
+  "author": {
+    "name": "Atectix"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Atectix AI Engineering Skills",
+    "shortDescription": "AI-native product and engineering workflows",
+    "longDescription": "Reusable Codex skills for planning, building, deploying, and validating AI-native products.",
+    "developerName": "Atectix",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me turn a product idea into a deployed MVP."
+    ]
+  }
+}

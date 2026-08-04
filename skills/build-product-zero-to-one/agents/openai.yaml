@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Product Zero to One"
+  short_description: "Turn a product idea into a deployed first version"
+  default_prompt: "Use $build-product-zero-to-one to guide this product idea from BRD through a deployed MVP."
