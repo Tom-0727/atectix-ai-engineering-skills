@@ -1,0 +1,1 @@
+Use React with TypeScript.

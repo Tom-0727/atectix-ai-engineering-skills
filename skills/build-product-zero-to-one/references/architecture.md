@@ -1,32 +1,45 @@
 # Architecture design
 
-## Purpose
+Design the smallest implementation-ready architecture for the confirmed MVP.
 
-Choose the smallest technical shape that can implement and deploy the confirmed MVP.
+## Defaults
 
-## Process
+- Copy the complete contents of `../assets/monorepo_archetypes/` directly into the product repository root. Do not copy the `monorepo_archetypes` directory itself or recreate its structure manually.
+- Preserve existing target files and merge existing `AGENTS.md` instructions instead of overwriting them.
+- Use React with TypeScript for `apps/web` and FastAPI with Python for `services/api`.
+- Deploy the product processes with Docker Compose.
+- Treat template directories as available structure, not as processes that must be implemented or deployed.
 
-1. Read the confirmed BRD and MVP PRD.
-2. Identify required clients and independently running server processes.
-3. Read [monorepo_archetypes.md](monorepo_archetypes.md).
-4. Select only the directories and services required by the MVP.
-5. Record the chosen runtime, key external dependencies, service boundaries, repository tree, and deployment flow.
+## Architecture decisions
 
-Prefer one product monorepo and a single-machine Docker Compose deployment for the first version unless an MVP requirement makes that impossible. Keep authentication, database access, migrations, object-storage integration, and business logic inside the API until a real independent runtime boundary exists.
+Read the confirmed MVP PRD and domain model when available. Decide only what the implementation requires.
+
+### Clients and processes
+
+List the clients and independently running processes required by the MVP and define each responsibility. Keep a capability inside the API unless it must start, stop, deploy, or execute independently. The presence of `inference` or `worker` in the template does not justify implementing it.
+
+### Process communication
+
+For each required connection, record the caller, receiver, communication mechanism, whether it is synchronous or asynchronous, the core data exchanged, and which process owns the contract.
+
+### Database design
+
+When the MVP persists data, choose the database and define an implementation-ready physical schema. For each table, record:
+
+- Its purpose.
+- Field names and types.
+- Required, nullable, and default behavior.
+- Primary keys, foreign keys, and uniqueness constraints.
+- Relationships and other constraints required by confirmed product behavior.
+
+Do not add tables, fields, indexes, history, audit metadata, or extensibility structures without a confirmed implementation need.
 
 ## Artifact
 
 Write `.atectix/zero-to-one-product-build/03-architecture.md` with:
 
-- Technology choices that materially affect implementation.
-- Clients and server processes.
-- Repository tree.
-- Service responsibilities and communication.
-- Compose deployment shape and image promotion flow.
-- Consequential constraints or assumptions.
-
-Do not add scale forecasts, multi-region designs, speculative shared platforms, or abstraction layers unrelated to the MVP.
-
-## Exit
-
-Ask the user to confirm that the architecture can deliver every MVP feature and contains no component justified only by possible future needs.
+- The copied repository structure.
+- Required clients and processes with their responsibilities.
+- Communication between processes.
+- Docker Compose services that must run.
+- The selected database and physical schema, when persistence is required.

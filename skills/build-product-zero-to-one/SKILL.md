@@ -43,7 +43,7 @@ Select one or more capabilities according to the user's goal. Load each selected
 | --- | --- | --- |
 | Clarify users, pain, differentiation, or initial acquisition | [brd.md](references/brd.md) | `01-brd.md` |
 | Define MVP concepts, scope, exclusions, or validation evidence | [mvp-prd.md](references/mvp-prd.md) | `02-mvp-prd.md` |
-| Choose runtime boundaries, repository shape, or deployment design | [architecture.md](references/architecture.md) and, when relevant, [monorepo_archetypes.md](references/monorepo_archetypes.md) | `03-architecture.md` |
+| Define required clients and processes, process communication, Docker Compose deployment, repository shape, or physical database schema | [architecture.md](references/architecture.md) | `03-architecture.md` |
 | Design journeys, interactions, interface states, or UX artifacts | [ux-design.md](references/ux-design.md) | `04-ux-design.md` |
 | Define entities, relationships, constraints, or transitions | [domain-model.md](references/domain-model.md) | `05-domain-model.md` |
 | Implement, deploy, or verify the product | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `06-implementation.md`, plus `02-mvp-prd.md` for validation results |

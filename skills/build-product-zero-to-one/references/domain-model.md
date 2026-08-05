@@ -1,28 +1,9 @@
 # Domain model
 
-## Purpose
+Treat the domain model as the product's shared semantics, not as a database schema.
 
-Translate confirmed product concepts and UX behavior into a schema-ready domain definition.
-
-## Process
-
-Define only entities required by the MVP. For each entity, specify:
-
-- Meaning and ownership.
-- Fields, field types, required or optional status, and defaults where meaningful.
-- Stable identifiers and uniqueness rules.
-- Relationships and cardinality.
-- Valid states and state transitions.
-- Business constraints and deletion behavior.
-
-Add fields or events for MVP validation only when the confirmed PRD requires them. Do not create a generic analytics model.
-
-Distinguish domain fields from implementation metadata. Add indexes, audit fields, soft deletion, versioning, or generic extensibility only when a confirmed query, behavior, or constraint requires them.
-
-## Artifact
-
-Write `.atectix/zero-to-one-product-build/05-domain-model.md`. Use tables for fields and relationships when helpful. Keep names consistent with the MVP PRD and UX terminology.
-
-## Exit
-
-Check that every persisted MVP behavior has a place in the model and every field supports a confirmed behavior. Ask the user to confirm the model before implementation.
+- Derive the model from confirmed behavior and product language. Model only distinctions that affect product behavior or invariants.
+- Consider identity, ownership, relationships, and lifecycle only where relevant; they are reasoning lenses, not required sections.
+- Distinguish facts from derived values and current state from history when the distinction affects behavior or integrity.
+- Keep persistence, frameworks, analytics, and implementation metadata out unless they carry confirmed domain meaning.
+- Surface consequential ambiguity instead of inventing rules.
