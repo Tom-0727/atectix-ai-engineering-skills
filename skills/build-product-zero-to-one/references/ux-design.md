@@ -2,25 +2,30 @@
 
 ## Purpose
 
-Make the MVP's core value reachable through an implementable user experience.
+Turn the confirmed MVP into a clear, coherent, and implementable experience that helps users reach its core value.
 
-## Process
+## Design questions
 
-Design only the journeys needed by confirmed MVP features. For each journey, define:
+Help the user make the UX decisions that matter by reasoning through four questions:
 
-- Entry point and user intent.
-- Ordered user actions and system responses.
-- Screens or surfaces involved.
-- Loading, empty, success, validation, permission, and failure states that affect the journey.
-- Navigation and the point at which the user receives value.
-- Validation-data collection points, feedback entry points, and required consent notices when relevant.
+1. Where does the user enter, and what are they trying to accomplish?
+2. What is the clearest path from that entry point to the moment the user receives value?
+3. At each important moment, what must the user see, understand, decide, or do?
+4. How should the experience behave when the path is incomplete or disrupted, including waiting, empty, invalid, denied, failed, and recovery states?
 
-Use wireframes, diagrams, or interface specifications when they communicate the interaction more clearly than prose. Reuse platform conventions before creating a design system.
+Use these questions as design lenses, not as a mandatory sequence or checklist. Emphasize the questions and journeys that carry the most risk or value for the product.
+
+## UX expertise
+
+Use `$ui-ux-pro-max` to strengthen UX reasoning and key interaction and visual decisions. Keep its guidance within the confirmed MVP scope and the principles below.
+
+## Design principles
+
+- Stay within the confirmed MVP. Surface missing product decisions instead of silently expanding scope.
+- Make the core value easy to discover and reach. Remove steps, choices, and information that do not help the user progress.
+- Design user actions and system responses together so the experience remains understandable across relevant states.
+- Integrate confirmed validation-data collection, feedback, permissions, and consent where relevant without obscuring the user's primary task.
 
 ## Artifact
 
-Write `.atectix/zero-to-one-product-build/04-ux-design.md`. Include the core journey first, then the minimum screen inventory and interaction/state details needed for implementation. Link any visual artifacts stored elsewhere in the repository.
-
-## Exit
-
-Walk through each MVP feature against the UX artifact and ask the user to confirm that the main journey is complete and understandable.
+Write `.atectix/zero-to-one-product-build/04-ux-design.md` so an implementer can understand the intended experience and the reasoning behind consequential decisions. Adapt the document to the product; include the relevant journeys, moments of value, surfaces, navigation or information hierarchy, interaction and state behavior, assumptions, and unresolved questions.

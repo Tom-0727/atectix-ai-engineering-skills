@@ -1,20 +1,46 @@
-A collection of reusable skills for AI-native software development.
+# Atectix AI Engineering Skills
 
-## Install as a skill
+## What this repository does
+
+A collection of reusable Codex skills for planning, building, deploying, and
+validating AI-native products. For best results, set reasoning to `xhigh`.
+
+## Install
+
+### Single skill
+
+Install `build-product-zero-to-one`:
 
 ```bash
 npx skills add Tom-0727/atectix-ai-engineering-skills --skill build-product-zero-to-one --agent codex
 ```
 
-Add the optional `--global` flag for a user-wide install. Rerun the same command
-to update.
+Rerun the same command to update it.
 
-## Install as a Codex plugin
+### Codex plugin
+
+Install:
 
 ```bash
-codex plugin marketplace add Tom-0727/atectix-ai-engineering-skills # first install only
-codex plugin marketplace upgrade atectix                         # update only
-codex plugin add atectix-ai-engineering-skills@atectix           # install or reinstall
+codex plugin marketplace add Tom-0727/atectix-ai-engineering-skills
+codex plugin add atectix-ai-engineering-skills@atectix
 ```
 
-For best results, set thinking to `xhigh`.
+Update:
+
+```bash
+codex plugin marketplace upgrade atectix
+codex plugin add atectix-ai-engineering-skills@atectix
+```
+
+## Other dependencies
+
+### UI/UX Pro Max
+
+From the target project's root, install or refresh the pinned project-level
+dependency:
+
+```bash
+npx --yes ui-ux-pro-max-cli@2.13.0 init --ai codex --force
+npx skills add https://github.com/multica-ai/andrej-karpathy-skills --skill karpathy-guidelines
+```
