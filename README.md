@@ -16,3 +16,5 @@ codex plugin marketplace add Tom-0727/atectix-ai-engineering-skills # first inst
 codex plugin marketplace upgrade atectix                         # update only
 codex plugin add atectix-ai-engineering-skills@atectix           # install or reinstall
 ```
+
+For best results, set thinking to `xhigh`.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deep Research"
+  short_description: "Conduct focused, multi-angle market research"
+  default_prompt: "Use $deep-research to conduct market research on this topic and synthesize the findings."
