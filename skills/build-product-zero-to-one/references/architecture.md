@@ -12,7 +12,7 @@ Design the smallest implementation-ready architecture for the confirmed MVP.
 
 ## Architecture decisions
 
-Read the confirmed MVP PRD and domain model when available. Decide only what the implementation requires.
+Read the confirmed MVP PRD, domain model, and UX design before finalizing the architecture. Exploration may start earlier. Decide only what the implementation requires.
 
 ### Clients and processes
 
@@ -24,7 +24,7 @@ For each required connection, record the caller, receiver, communication mechani
 
 ### Database design
 
-When the MVP persists data, choose the database and define an implementation-ready physical schema. For each table, record:
+When the MVP persists data, choose the database and derive an implementation-ready physical schema from the confirmed domain model. For each table, record:
 
 - Its purpose.
 - Field names and types.
@@ -36,7 +36,7 @@ Do not add tables, fields, indexes, history, audit metadata, or extensibility st
 
 ## Artifact
 
-Write `.atectix/zero-to-one-product-build/03-architecture.md` with:
+Write `.atectix/zero-to-one-product-build/05-architecture.md` with:
 
 - The copied repository structure.
 - Required clients and processes with their responsibilities.

@@ -25,13 +25,15 @@ Store durable product decisions under:
 └── zero-to-one-product-build/
     ├── 01-brd.md
     ├── 02-mvp-prd.md
-    ├── 03-architecture.md
+    ├── 03-domain-model.md
     ├── 04-ux-design.md
-    ├── 05-domain-model.md
+    ├── 05-architecture.md
     └── 06-implementation.md
 ```
 
 Treat these files as topic-based records that share context. Their numeric prefixes provide stable ordering on disk, not a required execution order. Create or update only the records affected by the user's work; do not create empty placeholders.
+
+For end-to-end work, use BRD → MVP PRD → domain model ↔ UX → architecture → implementation as the default dependency order. Revisit earlier decisions when later work reveals new evidence.
 
 When starting or resuming, use the user's request and relevant existing records to understand established decisions, evidence, assumptions, conflicts, and open questions. Do not infer progress from the highest-numbered file.
 
@@ -43,9 +45,9 @@ Select one or more capabilities according to the user's goal. Load each selected
 | --- | --- | --- |
 | Clarify users, pain, differentiation, or initial acquisition | [brd.md](references/brd.md) | `01-brd.md` |
 | Define MVP concepts, scope, exclusions, or validation evidence | [mvp-prd.md](references/mvp-prd.md) | `02-mvp-prd.md` |
-| Define required clients and processes, process communication, Docker Compose deployment, repository shape, or physical database schema | [architecture.md](references/architecture.md) | `03-architecture.md` |
+| Define entities, relationships, constraints, or transitions | [domain-model.md](references/domain-model.md) | `03-domain-model.md` |
 | Design journeys, interactions, interface states, or UX artifacts | [ux-design.md](references/ux-design.md) | `04-ux-design.md` |
-| Define entities, relationships, constraints, or transitions | [domain-model.md](references/domain-model.md) | `05-domain-model.md` |
+| Define required clients and processes, process communication, Docker Compose deployment, repository shape, or physical database schema | [architecture.md](references/architecture.md) | `05-architecture.md` |
 | Implement, deploy, or verify the product | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `06-implementation.md`, plus `02-mvp-prd.md` for validation results |
 
 These capabilities are neither mandatory nor sequential. Combine them when a decision crosses concerns, and revisit them when implementation findings, research, validation evidence, or user feedback changes the product.
