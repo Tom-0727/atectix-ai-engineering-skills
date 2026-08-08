@@ -54,6 +54,7 @@ These capabilities are neither mandatory nor sequential. Combine them when a dec
 
 ## Keep decisions coherent
 
+- Keep each record concise, clear, and easy to understand. Record current decisions rather than the reasoning process, and do not repeat information already maintained in another record.
 - Trace features, UX, domain concepts, architecture, and implementation choices to the confirmed product need and MVP scope.
 - Keep terminology and consequential decisions consistent across affected records.
 - Surface contradictions instead of silently choosing between conflicting records. Ask the user only when resolving the conflict requires a product decision.
