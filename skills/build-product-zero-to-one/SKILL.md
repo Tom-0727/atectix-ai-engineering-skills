@@ -27,8 +27,7 @@ Store durable product decisions under:
     ├── 02-mvp-prd.md
     ├── 03-domain-model.md
     ├── 04-ux-design.md
-    ├── 05-architecture.md
-    └── 06-implementation.md
+    └── 05-architecture.md
 ```
 
 Treat these files as topic-based records that share context. Their numeric prefixes provide stable ordering on disk, not a required execution order. Create or update only the records affected by the user's work; do not create empty placeholders.
@@ -47,8 +46,9 @@ Select one or more capabilities according to the user's goal. Load each selected
 | Define MVP concepts, scope, exclusions, or validation evidence | [mvp-prd.md](references/mvp-prd.md) | `02-mvp-prd.md` |
 | Define entities, relationships, constraints, or transitions | [domain-model.md](references/domain-model.md) | `03-domain-model.md` |
 | Design journeys, interactions, interface states, or UX artifacts | [ux-design.md](references/ux-design.md) | `04-ux-design.md` |
-| Define required clients and processes, process communication, Docker Compose deployment, repository shape, or physical database schema | [architecture.md](references/architecture.md) | `05-architecture.md` |
-| Implement, deploy, or verify the product | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `06-implementation.md`, plus `02-mvp-prd.md` for validation results |
+| Turn core experience, quality, or delivery risks into consequential technical decisions | [architecture.md](references/architecture.md) | `05-architecture.md` |
+| Design PostgreSQL tables, fields, relationships, or constraints from confirmed product behavior | [database-design.md](references/database-design.md) | Product rules in `03-domain-model.md`; schema in implementation files |
+| Implement, deploy, or verify the product | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `02-mvp-prd.md` for validation results |
 
 These capabilities are neither mandatory nor sequential. Combine them when a decision crosses concerns, and revisit them when implementation findings, research, validation evidence, or user feedback changes the product.
 
@@ -63,4 +63,4 @@ These capabilities are neither mandatory nor sequential. Combine them when a dec
 
 ## Match the requested outcome
 
-For focused work, complete the requested decision, artifact, or implementation outcome without forcing unrelated capabilities. For an end-to-end request, continue until the smallest useful version is deployed and its initial validation evidence has been interpreted. Follow actual decision dependencies and discoveries rather than completing every capability once in numeric order.
+For focused work, complete the requested decision, artifact, or implementation outcome without forcing unrelated capabilities. Before first implementation, copy the contents of `assets/monorepo_archetypes/` into the product repository root, preserve existing files, and merge applicable `AGENTS.md` instructions. For an end-to-end request, continue until the smallest useful version is deployed and its initial validation evidence has been interpreted. Follow actual decision dependencies and discoveries rather than completing every capability once in numeric order.
