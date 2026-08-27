@@ -1,11 +1,11 @@
 ---
 name: build-product-zero-to-one
-description: Help users shape and ship the smallest useful version of a product. Use when the user wants to create a product, define its business case or MVP, plan validation, design its architecture, UX, or domain model, implement or deploy it, review initial evidence, or resume work from `.atectix/zero-to-one-product-build/` artifacts.
+description: Help users shape and ship a new product from idea to its first useful version. Use when defining, designing, implementing, deploying, validating, or resuming a product that has not yet completed its zero-to-one stage. Do not use for fixes, behavior adjustments, or small improvements to an existing working product; use maintain-product instead.
 ---
 
 # Build Product Zero to One
 
-Help the user make connected business, product, design, technical, and implementation decisions for one product. Support both end-to-end product creation and focused work on any relevant concern.
+Help the user make connected business, product, design, technical, and implementation decisions for one product. Support both end-to-end product creation and focused work required to reach its first useful version.
 
 ## Operating principles
 
@@ -48,7 +48,7 @@ Select one or more capabilities according to the user's goal. Load each selected
 | Design journeys, interactions, interface states, or UX artifacts | [ux-design.md](references/ux-design.md) | `04-ux-design.md` |
 | Turn core experience, quality, or delivery risks into consequential technical decisions | [architecture.md](references/architecture.md) | `05-architecture.md` |
 | Design PostgreSQL tables, fields, relationships, or constraints from confirmed product behavior | [database-design.md](references/database-design.md) | Product rules in `03-domain-model.md`; schema in implementation files |
-| Implement, deploy, or verify the product | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `02-mvp-prd.md` for validation results |
+| Implement, deploy, or verify the first product version | Relevant confirmed product records; use [mvp-prd.md](references/mvp-prd.md) when planning or reviewing validation | `02-mvp-prd.md` for validation results |
 
 These capabilities are neither mandatory nor sequential. Combine them when a decision crosses concerns, and revisit them when implementation findings, research, validation evidence, or user feedback changes the product.
 
