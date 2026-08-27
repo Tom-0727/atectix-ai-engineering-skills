@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Product Feature"
+  short_description: "Design and build a new product feature"
+  default_prompt: "Use $build-product-feature to define, design, and implement this feature in my existing product."
