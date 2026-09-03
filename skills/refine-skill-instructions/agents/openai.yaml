@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refine Skill Instructions"
+  short_description: "Refine Codex skill instructions"
+  default_prompt: "Use $refine-skill-instructions to review and tighten this skill's instructions."
