@@ -1,6 +1,6 @@
 ---
 name: build-product-zero-to-one
-description: Help users shape and ship a new product from idea to its first useful version. Use when defining, designing, implementing, deploying, validating, or resuming a product that has not yet completed its zero-to-one stage. Do not use for fixes, behavior adjustments, or small improvements to an existing working product; use maintain-product instead.
+description: Help users shape and ship a new product from idea to its first useful version. Use when defining, designing, implementing, deploying, validating, or resuming a product that has not yet completed its zero-to-one stage. Do not use for fixes, behavior adjustments, or small improvements to an existing working product; use fix-and-improve-product instead.
 ---
 
 # Build Product Zero to One

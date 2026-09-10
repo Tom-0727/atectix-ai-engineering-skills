@@ -1,4 +1,0 @@
-interface:
-  display_name: "Maintain Product"
-  short_description: "Maintain and adjust an existing product"
-  default_prompt: "Use $maintain-product to understand this issue, align on the expected result and modification approach, then implement the confirmed change."

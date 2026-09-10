@@ -1,0 +1,4 @@
+interface:
+  display_name: "I Have ADHD"
+  short_description: "Keep replies clear and actionable for ADHD readers"
+  default_prompt: "Use $i-have-adhd to keep replies concise and easy to follow, lead with the answer or next action, and number steps when needed."

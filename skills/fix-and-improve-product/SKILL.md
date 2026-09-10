@@ -1,9 +1,9 @@
 ---
-name: maintain-product
-description: Maintain and incrementally adjust an existing, working product. Use when the user asks to fix a problem, change existing behavior, or make a small improvement. Do not use when the request introduces a distinct new product capability.
+name: fix-and-improve-product
+description: Fix bugs and make small improvements to existing product features, UI, or business logic. Do not use for standalone operational tasks such as deployment, service restarts, or status checks, or for adding a distinct new product capability.
 ---
 
-# Maintain Product
+# Fix and Improve Product
 
 Make focused changes to an existing product without expanding the work into new product development.
 

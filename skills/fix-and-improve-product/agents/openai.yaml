@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fix and Improve Product"
+  short_description: "Fix bugs and make small product improvements"
+  default_prompt: "Use $fix-and-improve-product to understand this issue, align on the expected result and modification approach, then implement the confirmed change."
