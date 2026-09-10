@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make PEC"
+  short_description: "Build product engineering context from an existing app"
+  default_prompt: "Use $make-pec to build PEC for this existing app repository from its code, database definitions, and product documentation."
