@@ -30,6 +30,7 @@ pec/
 │       ├── logic/
 │       │   └── <logic>.md
 │       ├── data.md
+│       ├── pages/<subpage>/
 │       ├── modules/<module>/
 │       └── actions/<action>/
 └── tasks/
@@ -40,7 +41,9 @@ pec/
         └── data.md
 ```
 
-`pages/` contains user-visible product entry points. Place modules under their page and actions under their module or directly under their page. `tasks/` contains asynchronous, scheduled, message-consuming, or other background tasks.
+Top-level `pages/` contains only main product entry pages. Nest subpages in their parent page's `pages/` directory, following product navigation and ownership rather than URL segments. Subpages remain `page` nodes with the same metadata and may contain further subpages.
+
+Place modules (functional areas within a page) under their page's `modules/`, and actions under their module or directly under their page. `tasks/` contains asynchronous, scheduled, message-consuming, or other background tasks.
 
 ### Nodes
 
