@@ -416,10 +416,13 @@ async function loadFiles(fileList) {
       if (!unitPath.startsWith(dir + '/')) continue;
       const relative = unitPath.slice(dir.length + 1);
       if (!/^(layout|ui|data|logic\/[^/]+)\.md$/.test(relative)) continue;
-      const key = relative.slice(0,-3), text = await unitFile.text();
-      units.push({key,text,title:unitTitle(key,text)});
+      const key = relative.slice(0,-3), source = await unitFile.text();
+      const frontmatter = source.match(/^\uFEFF?---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/);
+      const title = frontmatter ? metadata(frontmatter[1]).title : '';
+      const text = frontmatter ? source.slice(frontmatter[0].length) : source;
+      units.push({key,text,title:title || unitTitle(key,text),hasTitle:!!title});
     }
-    const rank = key => key === 'layout' ? 0 : key === 'ui' ? 1 : key.startsWith('logic/') ? 2 : 3;
+    const rank = key => key === 'layout' ? 0 : key === 'ui' ? 1 : key === 'logic/overview' ? 2 : key.startsWith('logic/') ? 3 : 4;
     units.sort((a,b) => rank(a.key)-rank(b.key) || a.key.localeCompare(b.key));
     next.push({...meta,dir,units,children:[]});
   }
@@ -533,7 +536,7 @@ function openNode(id,key,updateHash = true) {
   for (const unit of node.units) {
     const section = el('section',undefined,'unit'); section.id = 'unit-' + unit.key;
     section.append(el('div',unit.key + '.md','unit-label'));
-    if (!/^#\s+/m.test(unit.text)) section.append(el('h2',unit.title));
+    if (unit.hasTitle || !/^#\s+/m.test(unit.text)) section.append(el('h2',unit.title));
     section.append(renderMarkdown(unit.text,refs)); content.append(section);
     const anchor = el('a',unit.title); anchor.href = hashFor(id,unit.key);
     anchor.addEventListener('click',event => { event.preventDefault(); openNode(id,unit.key); }); outline.append(anchor);
