@@ -1,6 +1,6 @@
 ---
 name: refine-skill-instructions
-description: Review and refine the instructions in an existing or drafted Codex skill for clarity, concision, concrete wording, single-source ownership, and confirmed scope. Use when the user explicitly asks to critique, simplify, de-duplicate, or tighten SKILL.md content. Do not use to create or scaffold a skill or to design its resources, metadata, or packaging.
+description: Review and refine the instructions in an existing or drafted agent skill for clarity, concision, concrete wording, single-source ownership, and confirmed scope. Use when the user explicitly asks to critique, simplify, de-duplicate, or tighten SKILL.md content. Do not use to create or scaffold a skill or to design its resources, metadata, or packaging.
 ---
 
 # Skill Design Principles

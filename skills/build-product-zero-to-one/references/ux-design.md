@@ -17,7 +17,7 @@ Use these questions as design lenses, not as a mandatory sequence or checklist. 
 
 ## UX expertise
 
-Use `$ui-ux-pro-max` to strengthen UX reasoning and key interaction and visual decisions. Keep its guidance within the confirmed MVP scope and the principles below.
+Use the `ui-ux-pro-max` skill to strengthen UX reasoning and key interaction and visual decisions. Keep its guidance within the confirmed MVP scope and the principles below.
 
 ## Design principles
 

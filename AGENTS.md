@@ -2,8 +2,8 @@
 
 ```text
 .
-├── .codex-plugin/
-│   └── plugin.json
+├── scripts/
+│   └── install.sh
 ├── skills/
 │   └── <skill-name>/
 │       ├── SKILL.md
@@ -16,10 +16,10 @@
 └── .github/workflows/
 ```
 
-- `.codex-plugin/plugin.json` is required and declares this repository as a skills-only plugin with `"skills": "./skills/"`.
+- `scripts/install.sh` installs or updates every skill for Codex and Claude Code with `npx skills` and removes skills deleted upstream.
 - `skills/` contains all distributable skills as direct child directories.
 - `skills/<skill-name>/SKILL.md` is required; the directory and frontmatter `name` use the same lowercase kebab-case value.
-- `agents/openai.yaml` is recommended for skill UI metadata and dependency declarations.
+- `agents/openai.yaml` is recommended for Codex skill UI metadata and dependency declarations.
 - `references/` contains documentation loaded on demand by the skill.
 - `scripts/` inside a skill contains executable helpers distributed with that skill.
 - `assets/` contains templates and resources used to produce outputs.
