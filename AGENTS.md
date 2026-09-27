@@ -2,9 +2,6 @@
 
 ```text
 .
-├── scripts/
-│   ├── install.sh
-│   └── uninstall.sh
 ├── skills/
 │   └── <skill-name>/
 │       ├── SKILL.md
@@ -17,8 +14,6 @@
 └── .github/workflows/
 ```
 
-- `scripts/install.sh` installs or updates every skill for Codex and Claude Code with `npx skills` and removes skills deleted upstream.
-- `scripts/uninstall.sh` removes skills owned by this repository according to the selected scope's skills lock; `-g` selects global installations.
 - `skills/` contains all distributable skills as direct child directories.
 - `skills/<skill-name>/SKILL.md` is required; the directory and frontmatter `name` use the same lowercase kebab-case value.
 - `agents/openai.yaml` is recommended for Codex skill UI metadata and dependency declarations.
