@@ -1,6 +1,6 @@
 ---
 name: fix-and-improve-product
-description: Fix bugs and make small improvements to existing product features, UI, or business logic. Do not use for standalone operational tasks such as deployment, service restarts, or status checks, or for adding a distinct new product capability.
+description: Fix, adjust, or optimize an existing product's code, docs, or agent instructions (AGENTS.md, skills, prompts), including refactoring, de-duplicating, renaming, and removing. Not for new capabilities, standalone operational tasks such as deployment, or tightening one skill's wording (use refine-skill-instructions).
 ---
 
 # Fix and Improve Product
