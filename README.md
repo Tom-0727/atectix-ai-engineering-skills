@@ -7,24 +7,19 @@ building, deploying, and validating AI-native products.
 
 ## Install and update
 
-Skills from this repository are managed by
-[CC Switch](https://github.com/farion1231/cc-switch). It installs directly from
-GitHub, stores the source copies in `~/.cc-switch/skills/`, and links each skill
-into the application directories it is enabled for.
+Install with [`skills`](https://github.com/vercel-labs/skills). It stores each
+skill once in `.agents/skills/`, which Codex reads directly, and symlinks it into
+agent-specific directories such as `.claude/skills/` for Claude Code.
 
-1. Open **Skills**, then **Discover skills**, and add the repository
-   `Tom-0727/atectix-ai-engineering-skills`.
-2. Install the skills you want.
-3. On each installed skill, enable Codex and Claude as needed.
-4. Use **Check updates** to update, and CC Switch's uninstall action to remove.
+```bash
+npx skills add Tom-0727/atectix-ai-engineering-skills --skill '*' -g -a codex -a claude-code -y
+npx skills update -g
+npx skills remove -g <skill>
+```
 
-Do not also install these skills globally with `npx skills`: CC Switch removes or
-overwrites files in application directories that are not enabled in its records,
-and a copy left in `~/.agents/skills/` bypasses its Codex toggle.
-
-For a project-level install without CC Switch, use
-[`skills`](https://github.com/vercel-labs/skills) from the project's root:
-`npx skills add Tom-0727/atectix-ai-engineering-skills --skill '*' -a codex -a claude-code`.
+`-g` installs into `~/.agents/skills/` and `~/.claude/skills/` for all projects.
+To install into a single project instead, run `add` from the project's root
+without `-g`.
 
 ## Other dependencies
 
