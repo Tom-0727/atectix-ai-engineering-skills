@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make Repo Change"
+  short_description: "Make focused changes to an existing repository"
+  default_prompt: "Use $make-repo-change to understand this change request, align on the expected result and modification approach, then implement the confirmed change."
