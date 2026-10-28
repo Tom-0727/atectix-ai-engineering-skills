@@ -1,11 +1,11 @@
 ---
 name: make-repo-change
-description: Make changes to an existing repository's code, docs, configuration, or agent instructions (AGENTS.md, skills, prompts), including fixing, adjusting, optimizing, refactoring, de-duplicating, renaming, and removing. Not for new product capabilities, standalone operational tasks such as deployment, or tightening one skill's wording (use refine-skill-instructions).
+description: Make changes to an existing repository's code, docs, configuration, or agent instructions (AGENTS.md, skills, prompts), including adding, fixing, adjusting, optimizing, refactoring, de-duplicating, renaming, and removing. Not for standalone operational tasks such as deployment, or tightening one skill's wording (use refine-skill-instructions).
 ---
 
 # Make Repo Change
 
-Make focused changes to an existing repository without expanding the work into new product development. Make each change in its own git worktree so that several agents can work in the same repository at once.
+Make focused changes to an existing repository. Make each change in its own git worktree so that several agents can work in the same repository at once.
 
 ## Workflow
 

@@ -2,8 +2,8 @@
 
 ## What this repository does
 
-A collection of reusable agent skills for Codex and Claude Code for planning,
-building, deploying, and validating AI-native products.
+A collection of reusable agent skills for Codex and Claude Code for building
+AI-native products.
 
 ## Install and update
 
@@ -20,15 +20,3 @@ npx skills remove -g <skill>
 `-g` installs into `~/.agents/skills/` and `~/.claude/skills/` for all projects.
 To install into a single project instead, run `add` from the project's root
 without `-g`.
-
-## Other dependencies
-
-### UI/UX Pro Max
-
-From the target project's root, install or refresh the pinned project-level
-dependency, choosing the `--ai` value for your agent:
-
-```bash
-npx --yes ui-ux-pro-max-cli@2.13.0 init --ai codex --force   # or --ai claude
-npx skills add https://github.com/multica-ai/andrej-karpathy-skills --skill karpathy-guidelines -a codex -a claude-code
-```

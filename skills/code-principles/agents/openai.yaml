@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Principles"
+  short_description: "Keep the code the authoritative product context"
+  default_prompt: "Use $code-principles while writing this code."
