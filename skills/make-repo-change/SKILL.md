@@ -1,6 +1,6 @@
 ---
 name: make-repo-change
-description: Make changes to an existing repository's code, docs, configuration, or agent instructions (AGENTS.md, skills, prompts), including adding, fixing, adjusting, optimizing, refactoring, de-duplicating, renaming, and removing. Not for standalone operational tasks such as deployment, or tightening one skill's wording (use refine-skill-instructions).
+description: Make changes to an existing repository's code, docs, configuration, or agent instructions (AGENTS.md, skills, prompts). Not for standalone operational tasks such as deployment, or tightening one skill's wording (use refine-skill-instructions).
 ---
 
 # Make Repo Change

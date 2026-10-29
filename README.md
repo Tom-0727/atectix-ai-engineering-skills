@@ -20,3 +20,13 @@ npx skills remove -g <skill>
 `-g` installs into `~/.agents/skills/` and `~/.claude/skills/` for all projects.
 To install into a single project instead, run `add` from the project's root
 without `-g`.
+
+## Other dependencies
+
+### Karpathy guidelines
+
+From the target project's root, install the project-level dependency:
+
+```bash
+npx skills add https://github.com/multica-ai/andrej-karpathy-skills --skill karpathy-guidelines -a codex -a claude-code
+```
