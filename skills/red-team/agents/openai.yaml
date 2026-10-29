@@ -1,0 +1,4 @@
+interface:
+  display_name: "Red Team"
+  short_description: "Attack an idea with subagents or pick a solution through competing proposals"
+  default_prompt: "Use $red-team to have subagents attack this idea and return the strongest objections ranked by severity."
