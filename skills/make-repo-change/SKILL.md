@@ -5,28 +5,22 @@ description: Make changes to an existing repository's code, docs, configuration,
 
 # Make Repo Change
 
-Make focused changes to an existing repository. Make each change in its own git worktree so that several agents can work in the same repository at once.
+Make focused changes to an existing repository.
 
 ## Workflow
 
-1. Run `git worktree list`. If a `change/<task-slug>` branch belongs to this task, work in that worktree and continue from what its latest commit message says awaits user confirmation.
-2. Understand and locate the problem by inspecting the relevant repository context, implementation, and constraints. Search the repository for other instances of the same problem and for every place that implements or describes the affected behavior, including documentation, configuration, and agent instructions.
-3. Before modifying the repository, stop and align with the user. State only the core logic: the problem and where it occurs, the expected behavior, and the modification approach, including what it removes. Do not begin the modification until the user confirms.
-4. After confirmation, create the worktree, implement the smallest complete change in it, commit the change on the task branch, and briefly report the result, including what was removed, the branch, and the worktree path.
+1. Understand and locate the problem by inspecting the relevant repository context, implementation, and constraints. Search the repository for other instances of the same problem and for every place that implements or describes the affected behavior, including documentation, configuration, and agent instructions.
+2. Before modifying the repository, stop and align with the user. State only the core logic: the problem and where it occurs, the expected behavior, and the modification approach, including what it removes. Do not begin the modification until the user confirms.
+3. After confirmation, implement the smallest complete change, commit only the files it touches, and briefly report the result, including what was removed.
 
-Keep the work within the aligned problem and expected behavior. If either changes materially during implementation, commit all changes in the worktree as a WIP commit whose message states what awaits user confirmation, then stop and realign before continuing. When the user corrects one instance, search for every instance of the same problem and realign on all of them at once.
-
-## Worktree
-
-- From the repository root, run `git worktree add -b change/<task-slug> ../<repo-name>.worktrees/<task-slug> <default-branch>`. Use a short kebab-case slug that names the task; if the branch already exists for another task, choose a different slug.
-- Make every modification inside the worktree; do not modify the original checkout.
-- After the user merges or abandons the branch, remove the worktree with `git worktree remove` and delete the branch.
+Keep the work within the aligned problem and expected behavior. If either changes materially during implementation, stop and realign before continuing. When the user corrects one instance, search for every instance of the same problem and realign on all of them at once.
 
 ## Complete change
 
-A change is complete when nothing it supersedes remains:
+A change is complete when nothing it supersedes or leaves unused remains:
 
-- Replace or delete the superseded code, documentation, configuration, and instructions instead of adding the new version alongside them.
+- Replace or delete the superseded code, documentation, configuration, and instructions instead of adding the new version alongside them, and delete the code and configuration the change leaves unused.
 - Keep no compatibility aliases, branches that preserve the old behavior, or optional modes for anything the change replaces or the user rejects.
 - When the affected fact or rule is stated in several places, keep one authoritative statement and make the others refer to it.
+- Before committing, remove the drafts, scratch files, and other intermediate artifacts produced during the work.
 - Before reporting, search for the old names and wording to confirm they are gone.
