@@ -1,0 +1,4 @@
+interface:
+  display_name: "Socratic Tutor"
+  short_description: "苏格拉底式辅导：摸底、技能地图、逐题追问直到掌握"
+  default_prompt: "Use $socratic-tutor to teach me this topic: run a diagnostic, show a skill map, and question me one step at a time until I reach mastery."
