@@ -9,6 +9,7 @@ The code is the product. Keep what an agent needs to change it correctly inside 
 
 - Explain business rules where they are implemented: state the rule and why it exists, not what the code does. When a change alters the rule, update its explanation in the same change.
 - Do not maintain Markdown copies of behavior, schemas, configuration, or deployment that code or machine-readable files already define.
+- Share across consumers (UI, agents, CLI) only what must stay identical for all of them: data, codes, and business rules. Keep wording, formatting, and error messages with the consumer they serve. If changing code for one consumer would change what another receives, it is in the wrong place.
 - Avoid speculative design. Do not add abstractions, extension points, configuration, or directories without a confirmed need.
 
 ## New products
